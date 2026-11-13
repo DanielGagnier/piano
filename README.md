@@ -1,32 +1,54 @@
-# React + TypeScript + Vite
+# Virtual Piano
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A browser-based virtual piano built with React and TypeScript. Play piano notes using your mouse or computer keyboard, switch between instruments, and explore multiple octaves.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Multiple octaves:** Play across three octaves, from C3 to B5.
+- **Computer keyboard controls:** Use your computer keyboard to play notes.
+- **Mouse controls:** Click piano keys to play individual notes.
+- **Instrument selection:** Switch between acoustic and electric piano sounds.
+- **Octave selection:** Choose which octave your computer keyboard controls.
 
-## React Compiler
+## Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- Tone.js
+- smplr
+- CSS
 
-## Expanding the Oxlint configuration
+## Getting Started
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### Prerequisites
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- [Node.js](https://nodejs.org/)
+- npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/piano.git
+cd piano
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Install dependencies:
+
+```bash
+npm install
+```
+
+### Run the Development Server
+
+```bash
+npm run dev
+```
+
+Open the local URL provided by Vite in your browser.
+
+## Project Status
+
+This project is actively being developed. Future improvements may include additional instrument sounds, improved audio sampling, and expanded piano functionality.
