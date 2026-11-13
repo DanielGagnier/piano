@@ -1,0 +1,152 @@
+.app {
+  min-height: 100vh;
+  text-align: center;
+  padding: 60px 20px;
+  color: #f1f5f9;
+  background: linear-gradient(135deg, #111827, #1e293b);
+}
+
+.app h1 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.app h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #38bdf8;
+  border-radius: 4px;
+  margin: 16px auto;
+}
+
+.piano {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto 30px;
+  padding: 12px;
+  background: linear-gradient(145deg, #303846, #171d28);
+  border: 1px solid #475569;
+  border-radius: 14px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.white-keys {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 260px;
+}
+
+.white-key {
+  flex: 1;
+  background: linear-gradient(to bottom, #ffffff, #e2e8f0);
+  border: 1px solid #94a3b8;
+  border-radius: 0 0 7px 7px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+  transition: background 0.1s, box-shadow 0.1s;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
+}
+
+.white-key:hover {
+  background: #dbeafe;
+}
+
+.white-key.active {
+  background: #7dd3fc;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.black-key {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4%;
+  height: 58%;
+  background: linear-gradient(to bottom, #374151, #080c14);
+  border: 1px solid #020617;
+  border-radius: 0 0 6px 6px;
+  cursor: pointer;
+  color: #cbd5e1;
+  font-size: 11px;
+  font-weight: 600;
+  z-index: 1;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+  transition: background 0.1s;
+}
+
+.black-key:hover {
+  background: #334155;
+}
+
+.black-key.active {
+  background: #0284c7;
+}
+
+.octave-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 30px auto;
+  color: #f1f5f9;
+}
+
+.octave-selector button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #64748b;
+  border-radius: 8px;
+  background: #1e293b;
+  color: #f1f5f9;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.octave-selector button:hover {
+  background: #334155;
+}
+
+.octave-selector button.selected {
+  background: #0284c7;
+  border-color: #38bdf8;
+  color: white;
+}
+
+.instrument-selector {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 30px auto;
+}
+
+.instrument-selector button {
+  padding: 10px 20px;
+  border: 1px solid #64748b;
+  border-radius: 8px;
+  background: #1e293b;
+  color: #f1f5f9;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.instrument-selector button:hover {
+  background: #334155;
+}
+
+.instrument-selector button.selected {
+  background: #0284c7;
+  border-color: #38bdf8;
+  color: white;
+}
